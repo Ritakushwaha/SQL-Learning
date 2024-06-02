@@ -19,8 +19,8 @@ try:
     cursor = conn.cursor()
 
     # List of schemas to process
-    schemas = ['a', 'b', 'c', 'd'] #replace a,b,c,d schemas names from which you want to backup the routine definitions
-
+    schemas = ['schema1', 'schema2', 'schema3', 'schema4']
+  
     for schema in schemas:
         output_dir = os.path.join(base_output_dir, schema, 'routines') #this will result in ./out_put_dir/routines path
         os.makedirs(output_dir, exist_ok=True)
