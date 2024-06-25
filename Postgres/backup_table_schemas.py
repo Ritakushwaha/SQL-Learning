@@ -21,7 +21,7 @@ for schema in schemas:
     cur.execute(f"""
         SELECT table_name
         FROM information_schema.tables
-        WHERE specific_schema = '{schema}' ORDER BY table_name
+        WHERE table_schema = '{schema}' ORDER BY table_name
         """)
     tables = cur.fetchall()
 
